@@ -530,6 +530,8 @@
             margin-top: 30px;
         }
 
+
+
         /* YouTube Videos Section */
         .video-section {
             background-color: var(--bg-light);
@@ -1177,7 +1179,7 @@
 
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="#" class="nav-link">Ana Sayfa</a></li>
-                <li><a href="#fitoterapi" class="nav-link">Dr. Hakan Özkul</a></li>
+                <li><a href="hakan-ozkul.html" class="nav-link">Dr. Hakan Özkul</a></li>
                 <li><a href="#videolar" class="nav-link">Video Galeri</a></li>
                 <li><a href="#bitkiler" class="nav-link">Şifalı Bitkiler</a></li>
                 <li><a href="#iletisim" class="nav-link">İletişim</a></li>
@@ -1223,36 +1225,6 @@
                             <path d="M8,5.14V19.14L19,12.14L8,5.14Z" />
                         </svg>
                         Videoları İzle
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Dr. Hakan Özkul Info Section -->
-    <section class="doctor-section" id="fitoterapi">
-        <div class="container">
-            <div class="doctor-info" style="max-width: 800px; margin: 0 auto;">
-                <h2 style="text-align: center; margin-bottom: 30px;">Fitoterapi Nedir ve <span class="highlight">Dr.
-                        Hakan Özkul</span>'un Yaklaşımı</h2>
-                <p><strong>Fitoterapi</strong>, hastalıkların tıbbi bitkiler ve bunlardan elde edilen doğal bileşenlerle
-                    önlenmesi veya tedavi edilmesini sağlayan, Sağlık Bakanlığı onaylı bir bilim dalıdır. Geleneksel
-                    tedavi yöntemlerini modern tıbbın bulgularıyla harmanlar.</p>
-                <p>Tıp Doktoru ve Fitoterapi Uzmanı <strong class="highlight">Dr. Hakan Özkul</strong>, bitkisel
-                    tedavinin akademik ve klinik yönlerini birleştirerek hastalarına özel destek protokolleri
-                    geliştirmektedir. Özellikle kanser tedavisinde destekleyici fitoterapi, kısırlık, damar
-                    tıkanıklıkları ve bağışıklık sistemi güçlendirilmesi üzerine uzmanlaşmıştır.</p>
-                <p>Hakan Özkul'un tedavi protokolleri, standardizasyonu sağlanmış yüksek kaliteli bitkisel ekstraktların
-                    kullanımı esasına dayanır ve klasik kemoterapi, radyoterapi gibi tıbbi tedavilerle eş zamanlı,
-                    entegre şekilde yürütülür.</p>
-                <div class="channel-btn-box" style="text-align: center; margin-top: 30px;">
-                    <a href="https://www.youtube.com/@Hakan%C3%96zkulTedavi" target="_blank" class="btn-primary"
-                        style="background-color: #dc2626;">
-                        <svg style="width:20px;height:20px;" viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                                d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.518 3.545 12 3.545 12 3.545s-7.518 0-9.388.508a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.87.508 9.388.508 9.388.508s7.518 0 9.388-.508a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-                        </svg>
-                        YouTube Resmi Kanalını İncele
                     </a>
                 </div>
             </div>
@@ -1503,7 +1475,7 @@
                     <h4>Hızlı Menü</h4>
                     <ul>
                         <li><a href="#">Ana Sayfa</a></li>
-                        <li><a href="#fitoterapi">Dr. Hakan Özkul</a></li>
+                        <li><a href="hakan-ozkul.html">Dr. Hakan Özkul</a></li>
                         <li><a href="#videolar">Video Galeri</a></li>
                         <li><a href="#bitkiler">Şifalı Bitkiler</a></li>
                         <li><a href="#iletisim">İletişim & Danışmanlık</a></li>
@@ -1793,7 +1765,10 @@
 
             // Sunucu e-posta içeriğinde yalnızca name, email ve message alanlarını yazdırdığı için
             // telefon ve rahatsızlık bilgisini mesaj gövdesine ekleyerek gönderiyoruz.
-            let fullMessage = jsonData.message || '';
+            let fullMessage = (jsonData.message || '').trim();
+            if (!fullMessage) {
+                fullMessage = 'Bilgi ve randevu talebi.';
+            }
             const phoneInfo = jsonData.phone ? `Telefon: ${jsonData.phone}` : '';
             
             const diseaseSelect = document.getElementById('form-disease');

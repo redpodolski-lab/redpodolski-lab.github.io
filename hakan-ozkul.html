@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Dr. Hakan Özkul Biyografisi - Tıp Doktoru & Fitoterapi Uzmanı Dr. Hakan Özkul'un eğitim hayatı, akademik kariyeri, fitoterapi uzmanlığı ve biyografisi.">
+    <meta name="keywords"
+        content="dr hakan özkul biyografi, hakan özkul kimdir, fitoterapi uzmanı hakan özkul, hakan özkul eğitim">
+    <meta name="author" content="Şifalı Bitkiler Merkezi">
+    <title>Dr. Hakan Özkul Kimdir? | Fitoterapi Uzmanı Biyografisi</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #15803d;
+            /* Emerald Green */
+            --primary-dark: #14532d;
+            /* Deep Forest Green */
+            --primary-light: #22c55e;
+            /* Bright Green */
+            --accent: #eab308;
+            /* Amber Gold */
+            --bg-light: #fafaf9;
+            /* Stone Light */
+            --bg-card: #ffffff;
+            /* White */
+            --text-dark: #1c1917;
+            /* Dark Slate */
+            --text-muted: #78716c;
+            /* Warm Gray */
+            --border: #e7e5e4;
+            /* Light Border */
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        .brand {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+        }
+
+        /* Container */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--border);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--primary-dark);
+        }
+
+        .logo-area img {
+            height: 50px;
+            width: auto;
+            object-fit: contain;
+            border-radius: 4px;
+            flex-shrink: 0;
+        }
+
+        .brand {
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: -0.025em;
+        }
+
+        .brand span {
+            color: var(--primary-light);
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -6px;
+            left: 0;
+            background-color: var(--primary);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .nav-btn {
+            background-color: var(--primary);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            box-shadow: 0 4px 10px rgba(21, 128, 61, 0.2);
+            border: 1px solid transparent;
+        }
+
+        .nav-btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-1px);
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .menu-toggle svg {
+            width: 28px;
+            height: 28px;
+            stroke: var(--text-dark);
+        }
+
+        /* General Section Layout */
+        section {
+            padding: 80px 0;
+        }
+
+        /* Dr. Hakan Özkul Intro Section */
+        .doctor-section {
+            background-color: white;
+            border-bottom: 1px solid var(--border);
+        }
+
+        /* Button elements */
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            box-shadow: 0 4px 12px rgba(21, 128, 61, 0.15);
+            border: 1px solid transparent;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-cta {
+            background-color: #ea580c;
+            /* Vibrant Orange */
+            color: white;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(234, 88, 12, 0.3);
+            border: 2px solid #ea580c;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            animation: pulse-cta 2s infinite;
+        }
+
+        .btn-cta:hover {
+            background-color: #c2410c;
+            /* Darker Orange */
+            border-color: #c2410c;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(194, 65, 12, 0.5);
+            color: white;
+        }
+
+        @keyframes pulse-cta {
+            0% {
+                box-shadow: 0 0 0 0 rgba(234, 88, 12, 0.6);
+            }
+
+            70% {
+                box-shadow: 0 0 0 10px rgba(234, 88, 12, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(234, 88, 12, 0);
+            }
+        }
+
+        /* Biography Layout & Styling */
+        .bio-layout {
+            display: grid;
+            grid-template-columns: 380px 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .bio-profile-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid rgba(21, 128, 61, 0.1);
+            overflow: hidden;
+            position: sticky;
+            top: 100px;
+            transition: var(--transition);
+        }
+
+        .bio-profile-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .bio-image-wrapper {
+            width: 100%;
+            height: 380px;
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bio-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+        }
+
+        .bio-image-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(20, 83, 45, 0.95) 0%, rgba(20, 83, 45, 0) 100%);
+            padding: 30px 20px 20px;
+            color: white;
+            text-align: center;
+        }
+
+        .bio-image-overlay h3 {
+            font-size: 1.6rem;
+            margin-bottom: 5px;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .bio-image-overlay p {
+            font-size: 0.90rem;
+            color: #b7e4c7;
+            font-weight: 500;
+        }
+
+        .bio-details-list {
+            padding: 25px;
+            list-style: none;
+            background: #fafaf9;
+            border-top: 1px solid var(--border);
+        }
+
+        .bio-detail-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            color: var(--text-dark);
+        }
+
+        .bio-detail-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .bio-detail-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: rgba(21, 128, 61, 0.1);
+            color: var(--primary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        .bio-detail-content strong {
+            display: block;
+            color: var(--primary-dark);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .bio-detail-content span {
+            font-weight: 550;
+        }
+
+        .bio-text-section h2 {
+            font-size: 2.25rem;
+            color: var(--primary-dark);
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .bio-text-section h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent);
+            border-radius: 3px;
+        }
+
+        .bio-intro-lead {
+            font-size: 1.15rem;
+            color: var(--primary-dark);
+            line-height: 1.7;
+            font-weight: 500;
+            margin-bottom: 25px;
+            border-left: 4px solid var(--primary);
+            padding-left: 20px;
+        }
+
+        .bio-paragraphs p {
+            margin-bottom: 20px;
+            color: var(--text-dark);
+            font-size: 1rem;
+            line-height: 1.7;
+            text-align: justify;
+        }
+
+        .bio-paragraphs strong {
+            color: var(--primary-dark);
+        }
+
+        .bio-timeline-title {
+            font-size: 1.5rem;
+            color: var(--primary-dark);
+            margin: 40px 0 25px 0;
+            font-family: 'Outfit', sans-serif;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .bio-timeline-title svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--primary);
+        }
+
+        /* Timeline styling */
+        .bio-timeline {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 40px;
+        }
+
+        .bio-timeline::before {
+            content: '';
+            position: absolute;
+            left: 9px;
+            top: 10px;
+            bottom: 10px;
+            width: 2px;
+            background-color: var(--border);
+        }
+
+        .bio-timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .bio-timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .bio-timeline-dot {
+            position: absolute;
+            left: -30px;
+            top: 4px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: white;
+            border: 4px solid var(--primary);
+            z-index: 2;
+            transition: var(--transition);
+        }
+
+        .bio-timeline-item:hover .bio-timeline-dot {
+            background-color: var(--accent);
+            border-color: var(--primary-dark);
+            transform: scale(1.2);
+        }
+
+        .bio-timeline-content {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .bio-timeline-item:hover .bio-timeline-content {
+            border-color: rgba(21, 128, 61, 0.2);
+            box-shadow: var(--shadow-md);
+            transform: translateX(5px);
+        }
+
+        .bio-timeline-date {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--accent);
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            display: inline-block;
+            background-color: rgba(234, 179, 8, 0.1);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        .bio-timeline-heading {
+            font-size: 1.1rem;
+            color: var(--primary-dark);
+            margin-bottom: 8px;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 600;
+        }
+
+        .bio-timeline-text {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0c0a09;
+            color: #d6d3d1;
+            padding: 60px 0 20px 0;
+            border-top: 1px solid #292524;
+            font-size: 0.9rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 50px;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo h3 {
+            color: white;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+
+        .footer-logo p {
+            color: #a8a29e;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .footer-links h4 {
+            color: white;
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #a8a29e;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-light);
+        }
+
+        .footer-disclaimer {
+            background-color: #1c1917;
+            border-radius: 8px;
+            padding: 20px;
+            color: #a8a29e;
+            font-size: 0.8rem;
+            line-height: 1.5;
+            margin-bottom: 30px;
+            border-left: 3px solid var(--accent);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #292524;
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            color: #78716c;
+            font-size: 0.8rem;
+        }
+
+        /* Responsive Layouts */
+        @media (max-width: 992px) {
+            .bio-layout {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .bio-profile-card {
+                position: relative;
+                top: 0;
+                max-width: 450px;
+                margin: 0 auto;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .brand {
+                font-size: 1.3rem;
+            }
+
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                flex-direction: column;
+                padding: 30px;
+                gap: 20px;
+                border-bottom: 1px solid var(--border);
+                box-shadow: var(--shadow-lg);
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo-area">
+                <img src="images/logo.jpg" alt="Şifalı Bitkiler Merkezi"
+                    style="height: 50px; width: auto; object-fit: contain; border-radius: 4px; flex-shrink: 0;">
+                <div class="brand">Şifalı Bitkiler <span>Merkezi</span></div>
+            </a>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Ana Sayfa</a></li>
+                <li><a href="hakan-ozkul.html" class="nav-link" style="color: var(--primary);">Dr. Hakan Özkul</a></li>
+                <li><a href="index.html#videolar" class="nav-link">Video Galeri</a></li>
+                <li><a href="index.html#bitkiler" class="nav-link">Şifalı Bitkiler</a></li>
+                <li><a href="index.html#iletisim" class="nav-link">İletişim</a></li>
+            </ul>
+
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <a href="index.html#iletisim" class="nav-btn">Ücretsiz Danışın</a>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Menü">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header (Breadcrumbs Banner) -->
+    <section style="background: radial-gradient(circle at 10% 20%, rgba(240, 253, 244, 1) 0%, rgba(255, 255, 255, 1) 90%); padding: 50px 0; border-bottom: 1px solid var(--border);">
+        <div class="container">
+            <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 10px; font-weight: 500;">
+                <a href="index.html" style="color: var(--primary); text-decoration: none; transition: var(--transition);">Ana Sayfa</a> &gt; <span style="color: var(--text-dark);">Dr. Hakan Özkul Biyografisi</span>
+            </div>
+            <h1 style="font-size: 2.5rem; color: var(--primary-dark); font-family: 'Outfit', sans-serif;">Dr. Hakan Özkul</h1>
+            <p style="color: var(--text-muted); font-size: 1.05rem; margin-top: 5px;">Fitoterapi Uzmanı & Tıp Doktoru</p>
+        </div>
+    </section>
+
+    <!-- Biography & Info Section -->
+    <section class="doctor-section" id="fitoterapi-detay">
+        <div class="container">
+            <div class="bio-layout">
+                <!-- Left Column: Profile Card -->
+                <div class="bio-profile-card">
+                    <div class="bio-image-wrapper">
+                        <img src="images/drhakan-ozkul-h1.png.webp" alt="Dr. Hakan Özkul">
+                        <div class="bio-image-overlay">
+                            <h3>Dr. Hakan Özkul</h3>
+                            <p>Tıp Doktoru & Fitoterapi Uzmanı</p>
+                        </div>
+                    </div>
+                    <ul class="bio-details-list">
+                        <li class="bio-detail-item">
+                            <div class="bio-detail-icon">📍</div>
+                            <div class="bio-detail-content">
+                                <strong>Yerleşim & Çalışma</strong>
+                                <span>İstanbul (Özel Muayenehane)</span>
+                            </div>
+                        </li>
+                        <li class="bio-detail-item">
+                            <div class="bio-detail-icon">👨‍👩‍👧‍👦</div>
+                            <div class="bio-detail-content">
+                                <strong>Kişisel Bilgiler</strong>
+                                <span>Evli, 4 Çocuk Babası</span>
+                            </div>
+                        </li>
+                        <li class="bio-detail-item">
+                            <div class="bio-detail-icon">🔬</div>
+                            <div class="bio-detail-content">
+                                <strong>Deneyim Alanları</strong>
+                                <span>Kanser, Kısırlık, Damar Tıkanıklığı</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <div style="padding: 20px; display: flex; flex-direction: column; gap: 10px; background: #fafaf9; border-top: 1px solid var(--border);">
+                        <a href="https://www.youtube.com/@Hakan%C3%96zkulTedavi" target="_blank" class="btn-primary" style="background-color: #dc2626; width: 100%; justify-content: center; font-size: 0.85rem; padding: 10px 15px;">
+                            <svg style="width:16px;height:16px;fill:currentColor;margin-right:5px;" viewBox="0 0 24 24">
+                                <path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.518 3.545 12 3.545 12 3.545s-7.518 0-9.388.508a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.87.508 9.388.508 9.388.508s7.518 0 9.388-.508a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                            </svg>
+                            YouTube Kanalını İncele
+                        </a>
+                        <a href="index.html#iletisim" class="btn-cta" style="width: 100%; justify-content: center; font-size: 0.85rem; padding: 10px 15px; text-align: center;">
+                            Ücretsiz Danışma Al
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Biography Content & Educational Journey -->
+                <div class="bio-text-section">
+                    <h2>Dr. Hakan Özkul <span class="highlight">Biyografisi</span></h2>
+                    
+                    <div class="bio-intro-lead">
+                        Modern tıbbın ve bitkisel tedavinin (Fitoterapi) gücünü akademik düzeyde birleştiren Dr. Hakan Özkul, bütüncül sağlık yaklaşımıyla hastalarına şifa sunmaya devam etmektedir.
+                    </div>
+
+                    <div class="bio-paragraphs">
+                        <p><strong>Dr. Hakan Özkul</strong>, 1967 yılında Ankara’da doğdu. Eğitim hayatına İzmit Lisesi’nden devam ederek buradan başarıyla mezun oldu. Yükseköğrenimini <strong>Gazi Üniversitesi Tıp Fakültesi</strong>’nde tamamlayarak Tıp Doktoru unvanını kazandı. O günden itibaren tüm hastalarının bütüncül sağlığına hizmet vermeye büyük bir kararlılıkla devam etmektedir.</p>
+                        
+                        <p>Eğitim hayatı sırasında ve sonrasında hastalıkların tedavisinde bitkilerin gücüne tanık olmuştur. Modern tıbbın yetersiz kaldığı bazı durumlarda gerek ailesi gerekse çevresindeki diğer insanların uluslararası bilimsel nitelikte başvurduğu bitkisel desteklerin faydasını görmesi, bu alandaki büyük ihtiyacı anlamasına vesile olmuştur. Bu nedenle, henüz ülkemizde bu yönde bir yüksek lisans alanı oluşturulmadan önce, bitkileri tıp doktoru gözlüğüyle incelemek üzere <strong>Tıbbi ve Aromatik Bitkiler</strong> ön lisans bölümünü okumaya karar vermiş ve 2 yıllık eğitimi başarıyla tamamlayarak yeni bilgiler ve ufuklar edinmiştir.</p>
+                        
+                        <p>Eğitimin ve bilginin farklı kaynaklardan da alınarak geliştirilmesi gerektiğine inanan Dr. Hakan Özkul, akademik kariyerine <strong>Eskişehir Anadolu Üniversitesi Sağlık Bilimleri Enstitüsü</strong>’nde Tıbbi ve Aromatik Bitkiler alanında <strong>yüksek lisans</strong> eğitimini de tamamlayarak devam etmiştir. 2014 yılında yayınlanan ve yürürlüğe giren Geleneksel ve Tamamlayıcı Tıp Uygulama Yönetmeliği uyarınca, T.C. Sağlık Bakanlığı tarafından tıp doktorlarına özel olarak düzenlenen sertifika programına katılarak <strong>Fitoterapi Eğitimi</strong> almıştır. Bu eğitimle birlikte fitoterapi uygulamaları yapmaya resmi olarak yetkili <strong>Fitoterapi Uzmanı Doktor</strong> unvanını kazanmıştır.</p>
+                        
+                        <p>Türkiye’deki resmi akademik eğitimlerinin yanı sıra, bitkisel tedavinin en köklü uygulandığı bölgelerden biri olan <strong>Uzak Doğu'da da Fitoterapi Bitki Bilimi</strong> üzerine özel eğitimler almıştır. Fitoterapist Dr. Hakan Özkul, yurt içi ve yurt dışında birçok bilimsel konferans ve seminere katılarak vizyonunu sürekli güncellemektedir. Fitoterapi bilimine olan inancı ve insanların iyileşmesine yönelik hissettiği güçlü istekle hala araştırmaya ve gelişmeye devam etmektedir.</p>
+                        
+                        <p>Ulusal ve uluslararası bilimsel araştırmaları güncel olarak takip eden Dr. Özkul, hastalıklar ve bitkiler arasındaki ilişkinin kanıta dayalı verilerle ispatlanması ve tüm insanların kullanıma açılabilmesi için çeşitli televizyon programlarına katılarak bilgilerini paylaşmaktadır. İnsanların bitkiler dünyasının genişliğinin farkında olmalarını, ancak fayda sağlamanın yalnızca bilimsel yöntemlerle belirlenmiş ve nitelikli ürünlerin kullanımıyla olacağını vurgulamaktadır. Fitoterapi biliminin popülist yaklaşımlardan uzak tutularak tamamen bilimsel kaynaklara dayandırılması gerektiğini savunmaktadır.</p>
+                        
+                        <p>Türkiye ve bitkilerle tedavinin en çok geliştiği ülke olan Almanya tarafından onaylanmış <em>Cemre Ab-ı Hayat</em> ve <em>Kibarlı Panax</em> üreticisi Kibarlı Bitkisel Destek Ürünlerini geliştiren <strong>akademik kurulda</strong> görev alan Dr. Hakan Özkul, bu vesile ile birçok hastanın iyileşme sürecine katkıda bulunmuştur. Ülkemizde hak ettiği değeri göremeyen şifalı bitkilerin tanıtılması ve bilimsel çerçevede ele alınması için çeşitli makaleler kaleme almıştır. Dr. Hakan Özkul, Fitoterapi yönteminin doğru ve yaygın kullanılması amacıyla birçok ulusal TV programına konuk olarak halkı bilgilendirmeye devam etmektedir.</p>
+                        
+                        <p>Halen İstanbul’da ikamet etmekte olan Dr. Hakan Özkul, herhangi bir devlet veya özel hastanede çalışmamaktadır. Çalışmalarını İstanbul'daki <strong>özel muayenehanesinde</strong> sürdürmekte olup, Tıp Doktoru kimliği ile Fitoterapi uzmanlığını birleştirerek hastalarının şifalanmasına destek olmaktadır. Dr. Hakan Özkul, evli ve 4 çocuk babasıdır.</p>
+                    </div>
+
+                    <h3 class="bio-timeline-title">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M16.2 16.2L11 13V7H12.5V12.2L17 14.9L16.2 16.2Z"/>
+                        </svg>
+                        Eğitim ve Akademik Kariyer Yolculuğu
+                    </h3>
+
+                    <div class="bio-timeline">
+                        <div class="bio-timeline-item">
+                            <div class="bio-timeline-dot"></div>
+                            <div class="bio-timeline-content">
+                                <span class="bio-timeline-date">1967 - Ankara</span>
+                                <h4 class="bio-timeline-heading">Doğum & İlk Adımlar</h4>
+                                <p class="bio-timeline-text">Ankara'da dünyaya geldi. İlk ve ortaöğrenimini tamamladıktan sonra İzmit Lisesi'nden başarıyla mezun oldu.</p>
+                            </div>
+                        </div>
+
+                        <div class="bio-timeline-item">
+                            <div class="bio-timeline-dot"></div>
+                            <div class="bio-timeline-content">
+                                <span class="bio-timeline-date">Gazi Üniversitesi</span>
+                                <h4 class="bio-timeline-heading">Tıp Fakültesi ve Tıp Doktoru Unvanı</h4>
+                                <p class="bio-timeline-text">Gazi Üniversitesi Tıp Fakültesi'nden mezun olarak Tıp Doktoru (M.D.) unvanını kazandı ve modern tıp alanında hekimlik hayatına başladı.</p>
+                            </div>
+                        </div>
+
+                        <div class="bio-timeline-item">
+                            <div class="bio-timeline-dot"></div>
+                            <div class="bio-timeline-content">
+                                <span class="bio-timeline-date">Akademik Arayış</span>
+                                <h4 class="bio-timeline-heading">Tıbbi ve Aromatik Bitkiler Bölümü</h4>
+                                <p class="bio-timeline-text">Hastalıkların tedavisinde bitkilerin gücüne tanık olarak bu alanda uzmanlaşmak istedi. Türkiye'de henüz yüksek lisans programı yokken 2 yıllık Tıbbi ve Aromatik Bitkiler ön lisans programını tıp hekimi gözlüğüyle tamamladı.</p>
+                            </div>
+                        </div>
+
+                        <div class="bio-timeline-item">
+                            <div class="bio-timeline-dot"></div>
+                            <div class="bio-timeline-content">
+                                <span class="bio-timeline-date">Anadolu Üniversitesi</span>
+                                <h4 class="bio-timeline-heading">Tıbbi ve Aromatik Bitkiler Yüksek Lisans Derecesi</h4>
+                                <p class="bio-timeline-text">Eskişehir Anadolu Üniversitesi Sağlık Bilimleri Enstitüsü'nde Tıbbi ve Aromatik Bitkiler yüksek lisans programını bitirerek akademik birikimini üst seviyeye taşıdı.</p>
+                            </div>
+                        </div>
+
+                        <div class="bio-timeline-item">
+                            <div class="bio-timeline-dot"></div>
+                            <div class="bio-timeline-content">
+                                <span class="bio-timeline-date">Sağlık Bakanlığı GETAT</span>
+                                <h4 class="bio-timeline-heading">Sağlık Bakanlığı Onaylı Fitoterapi Uzmanlığı</h4>
+                                <p class="bio-timeline-text">2014 yılında yürürlüğe giren Geleneksel ve Tamamlayıcı Tıp Yönetmeliği uyarınca Sağlık Bakanlığı'nın hekimlere özel eğitim sertifika programını başarıyla bitirip yetkili Fitoterapi Uzmanı Doktor unvanını aldı.</p>
+                            </div>
+                        </div>
+
+                        <div class="bio-timeline-item">
+                            <div class="bio-timeline-dot"></div>
+                            <div class="bio-timeline-content">
+                                <span class="bio-timeline-date">Uluslararası Tecrübe</span>
+                                <h4 class="bio-timeline-heading">Uzak Doğu Bitki Bilimi & Akademik Kurul Üyelikleri</h4>
+                                <p class="bio-timeline-text">Uzak Doğu'da da Fitoterapi Bitki Bilimi eğitimi alarak uluslararası tedavileri yakından inceledi. Türkiye ve Almanya onaylı Kibarlı Bitkisel Destek Ürünleri akademik kurulunda yer aldı.</p>
+                            </div>
+                        </div>
+
+                        <div class="bio-timeline-item">
+                            <div class="bio-timeline-dot"></div>
+                            <div class="bio-timeline-content">
+                                <span class="bio-timeline-date">Günümüz</span>
+                                <h4 class="bio-timeline-heading">İstanbul - Özel Muayenehane</h4>
+                                <p class="bio-timeline-text">Halen İstanbul'da kendi özel muayenehanesinde tıp doktorluğu ile fitoterapi uzmanlığını birleştirerek hastalarına şifa sunmaya, TV programları ve makaleleriyle bilimsel fitoterapiyi tanıtmaya devam etmektedir.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-logo">
+                    <h3>Şifalı Bitkiler Merkezi</h3>
+                    <p>Doğal tedaviler ve fitoterapinin modern bilim ışığında insanlığa sunulması amacıyla çalışan
+                        bağımsız bir bilgi ve danışmanlık portalıdır. Dr. Hakan Özkul'un bitkisel formüllerini ve
+                        çalışmalarını referans alır.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Hızlı Menü</h4>
+                    <ul>
+                        <li><a href="index.html">Ana Sayfa</a></li>
+                        <li><a href="hakan-ozkul.html">Dr. Hakan Özkul</a></li>
+                        <li><a href="index.html#videolar">Video Galeri</a></li>
+                        <li><a href="index.html#bitkiler">Şifalı Bitkiler</a></li>
+                        <li><a href="index.html#iletisim">İletişim & Danışmanlık</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Kanal Bilgisi</h4>
+                    <ul>
+                        <li>Dr. Hakan Özkul Tedavi</li>
+                        <li>Resmi Kanal Linki:</li>
+                        <li><a href="https://www.youtube.com/@Hakan%C3%96zkulTedavi" target="_blank"
+                                style="color: var(--accent); font-weight: 600;">@HakanÖzkulTedavi</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-disclaimer">
+                <strong>YASAL UYARI:</strong> Bu web sitesinde sunulan tüm içerikler, bilgilendirme ve eğitim amaçlıdır.
+                Hekim teşhisi veya tedavisi yerine geçmez. Sağlık sorunlarınızda mutlaka uzman tıp hekiminize
+                başvurunuz. Sitede adı geçen takviye edici gıdalar ve bitkisel kürler ilaç değildir.
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Şifalı Bitkiler Merkezi. Tüm hakları saklıdır.</p>
+                <p>Modern Fitoterapi Bilgilendirme Portalı</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Hamburger Menu Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu on link click
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
