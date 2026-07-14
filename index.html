@@ -979,6 +979,17 @@
             margin-top: 15px;
         }
 
+        .form-error-message {
+            display: none;
+            background-color: #fee2e2;
+            color: #991b1b;
+            padding: 15px;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: 600;
+            margin-top: 15px;
+        }
+
         /* Footer */
         footer {
             background-color: #0c0a09;
@@ -1429,15 +1440,15 @@
                 <form action="https://api.sifalibitkilermerkezi.net/contact" method="post" id="consultation-form">
                     <div class="form-group">
                         <label for="form-name">Adınız Soyadınız *</label>
-                        <input type="text" id="form-name" required placeholder="Örn: Ahmet Yılmaz">
+                        <input type="text" id="form-name" name="name" required placeholder="Örn: Ahmet Yılmaz">
                     </div>
                     <div class="form-group">
                         <label for="form-phone">Telefon Numaranız *</label>
-                        <input type="tel" id="form-phone" required placeholder="Örn: 0555 123 45 67">
+                        <input type="tel" id="form-phone" name="phone" required placeholder="Örn: 0555 123 45 67">
                     </div>
                     <div class="form-group">
                         <label for="form-disease">İlgilendiğiniz Rahatsızlık Konusu *</label>
-                        <select id="form-disease" required>
+                        <select id="form-disease" name="disease" required>
                             <option value="">Seçiniz...</option>
                             <option value="kanser">Destekleyici Kanser Tedavisi</option>
                             <option value="kisirlik">Kısırlık (İnfertilite) Tedavisi</option>
@@ -1449,7 +1460,7 @@
                     </div>
                     <div class="form-group">
                         <label for="form-message">Mesajınız (Varsa hastalık geçmişiniz)</label>
-                        <textarea id="form-message" rows="4"
+                        <textarea id="form-message" name="message" rows="4"
                             placeholder="Kısaca durumunuzu açıklayabilirsiniz..."></textarea>
                     </div>
                     <button type="submit" class="btn-submit">
@@ -1457,6 +1468,9 @@
                     </button>
                     <div class="form-success-message" id="form-success">
                         Tebrikler! Talebiniz başarıyla alındı. En kısa sürede uzmanlarımız size dönüş yapacaktır.
+                    </div>
+                    <div class="form-error-message" id="form-error">
+                        Talebiniz gönderilirken bir hata oluştu. Lütfen bilgilerinizi kontrol edip tekrar deneyiniz veya doğrudan WhatsApp/Telefon üzerinden bizimle iletişime geçiniz.
                     </div>
                 </form>
             </div>
@@ -1759,15 +1773,40 @@
         // Consultation Form Submit
         const consultForm = document.getElementById('consultation-form');
         const formSuccess = document.getElementById('form-success');
+        const formError = document.getElementById('form-error');
 
         consultForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            // Simulate form submission
+            
             const submitBtn = consultForm.querySelector('.btn-submit');
             submitBtn.textContent = 'Gönderiliyor...';
             submitBtn.disabled = true;
+            formSuccess.style.display = 'none';
+            formError.style.display = 'none';
 
-            setTimeout(() => {
+            const formData = new FormData(consultForm);
+
+            fetch(consultForm.action, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: new URLSearchParams(formData)
+            })
+            .then(async response => {
+                if (!response.ok) {
+                    throw new Error('HTTP error ' + response.status);
+                }
+                
+                try {
+                    const data = await response.json();
+                    if (data && (data.success === false || data.status === 'error' || data.error)) {
+                        throw new Error(data.message || 'Server error');
+                    }
+                } catch (e) {
+                    // JSON ayrıştırılamazsa veya JSON değilse, status kodunu (2xx) başarılı kabul ediyoruz.
+                }
+
                 submitBtn.textContent = 'Gönderildi';
                 formSuccess.style.display = 'block';
                 consultForm.reset();
@@ -1777,7 +1816,18 @@
                     submitBtn.textContent = 'Gönder ve Bilgi Al';
                     submitBtn.disabled = false;
                 }, 5000);
-            }, 1200);
+            })
+            .catch(error => {
+                console.error('Submission failed:', error);
+                submitBtn.textContent = 'Hata Oluştu';
+                formError.style.display = 'block';
+
+                setTimeout(() => {
+                    formError.style.display = 'none';
+                    submitBtn.textContent = 'Gönder ve Bilgi Al';
+                    submitBtn.disabled = false;
+                }, 6000);
+            });
         });
 
         // Initial render
