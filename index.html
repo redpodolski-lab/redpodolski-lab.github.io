@@ -1443,6 +1443,10 @@
                         <input type="text" id="form-name" name="name" required placeholder="Örn: Ahmet Yılmaz">
                     </div>
                     <div class="form-group">
+                        <label for="form-email">E-posta Adresiniz *</label>
+                        <input type="email" id="form-email" name="email" required placeholder="Örn: ahmet@example.com">
+                    </div>
+                    <div class="form-group">
                         <label for="form-phone">Telefon Numaranız *</label>
                         <input type="tel" id="form-phone" name="phone" required placeholder="Örn: 0555 123 45 67">
                     </div>
@@ -1785,13 +1789,25 @@
             formError.style.display = 'none';
 
             const formData = new FormData(consultForm);
+            const jsonData = Object.fromEntries(formData.entries());
+
+            // Sunucu e-posta içeriğinde yalnızca name, email ve message alanlarını yazdırdığı için
+            // telefon ve rahatsızlık bilgisini mesaj gövdesine ekleyerek gönderiyoruz.
+            let fullMessage = jsonData.message || '';
+            const phoneInfo = jsonData.phone ? `Telefon: ${jsonData.phone}` : '';
+            
+            const diseaseSelect = document.getElementById('form-disease');
+            const diseaseText = diseaseSelect ? diseaseSelect.options[diseaseSelect.selectedIndex].text : '';
+            const diseaseInfo = diseaseText ? `Konu: ${diseaseText}` : '';
+            
+            jsonData.message = `${fullMessage}\n\n---\n${phoneInfo}\n${diseaseInfo}`.trim();
 
             fetch(consultForm.action, {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded'
+                    'Content-Type': 'application/json'
                 },
-                body: new URLSearchParams(formData)
+                body: JSON.stringify(jsonData)
             })
             .then(async response => {
                 if (!response.ok) {
